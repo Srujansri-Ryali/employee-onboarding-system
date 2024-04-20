@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?{% now "U" %}">
+</head>
+<body>
+<div class="nav">
+<ul class="navlist">
+    <li id="title">EMPLOYEE ONBOARDING SYSTEM</li>
+  <li class="navitem"><a class="linknavitem" href="/openjob">POST OPEN JOB POSITIONS</a></li>
+  <li class="navitem"><a class="linknavitem" href="/viewjob">VIEW JOBS</a></li>
+</ul>
+</div>
+<div class="dashboard">
+    <div class="empcard">
+        <p>HELLO {{user.empName}} !!</p>
+        <p>POSITION : {{user.empPosition}}</p>
+        <p>COMPANY : {{user.companyName}}</p>
+    </div>
+</div>
+</body>
+</html>

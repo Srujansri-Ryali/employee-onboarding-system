@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}?{% now "U"%}">
+</head>
+<body>
+<div class="logindiv">
+    <form action="" method="post">{% csrf_token %}
+    <label class="loginlabel">Username</label>
+    <input type="text" name="username" class="logininput" required>
+    <label class="loginlabel">Password</label>
+    <input type="password" name="password" class="logininput" required>
+    <input type="submit" class="loginbtn" value="Login">
+    </form>
+</div>
+</body>
+</html>

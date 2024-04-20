@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>OPEN JOB POSITIONS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/postopenjob.css' %}?{% now "U" %}">
+</head>
+</head>
+<body>
+<div class="nav">
+    <span id="title">EMPLOYEE ONBOARDING SYSTEM</span>
+</div>
+<h4 id="header">POST OPEN JOB POSITION</h4>
+<div class="jobform">
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="nextbtn" value="NEXT">
+</form>
+</div>
+</body>
+</html>

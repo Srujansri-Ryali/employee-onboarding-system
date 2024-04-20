@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{job.jobName}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/job.css' %}?{% now "U" %}">
+</head>
+<body>
+<div class="nav">
+    <span id="title">EMPLOYEE ONBOARDING SYSTEM</span>
+</div>
+<div class="jd">
+<h4>Hey Hi !! {{job.companyName}}  is recruiting !! </h4>
+    <p>We are recruiting for a position {{job.jobName}} in the locations {{job.jobLocation}}</p>
+   <p>You can find the JD below. </p>
+    <div>
+    <h4>JOB DESCRIPTION : </h4>
+        <p>{{job.jobDescription}}</p>
+    </div>
+    <p>EXPERIENCE REQUIRED : {{job.experienceRequired}}</p>
+    <div>
+        <h4>SKILLS REQUIRED : {{job.skillsRequired}}</h4>
+    </div>
+</div>
+
+</body>
+</html>
